@@ -10,8 +10,5 @@ graph TD;
     A(Analyzer Tool);
 
     G-->S-->A;
-
-    click G href "generator"
-    click A href "analyzer"
 ```
 
