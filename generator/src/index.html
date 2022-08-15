@@ -14,10 +14,22 @@
 </head>
 
 <body>
-    <h1>Hello generator tool!</h1>
-    <p>
-        TODO
-    </p>
+    <section id="control-plane">
+        <section class="audio">
+            <section class="status">
+                Status:
+                <span id="status-label">
+                    🔴 UNINITIALIZED
+                </span>
+            </section>
+            <section class="controls">
+                <button type="button" id="init-button">✨ Initialize</button>
+                <button type="button" id="play-pause-button">⏯ Play/Pause</button>
+                <select id="output-device-selection"></select>
+                <audio id="audio-element"></audio>
+            </section>
+        </section>
+    </section>
     <%= htmlWebpackPlugin.tags.bodyTags %>
 </body>
 
