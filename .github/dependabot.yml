@@ -6,11 +6,11 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/generator"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "nuget"
-    directory: "/"
+    directory: "/analyzer"
     schedule:
       interval: "daily"
