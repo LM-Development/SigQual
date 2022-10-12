@@ -1,11 +1,11 @@
 // TODO clean up code, modularize, so.
 
 // dom references
-var statusLabel = document.getElementById("status-label") as HTMLSpanElement;
-var initButton = document.getElementById("init-button") as HTMLButtonElement;
-var playPauseButton = document.getElementById("play-pause-button") as HTMLButtonElement;
-var audioElement = document.getElementById("audio-element") as HTMLAudioElement;
-var outputDeviceSelection = document.getElementById("output-device-selection") as HTMLSelectElement;
+const statusLabel = document.getElementById("status-label") as HTMLSpanElement;
+const initButton = document.getElementById("init-button") as HTMLButtonElement;
+const playPauseButton = document.getElementById("play-pause-button") as HTMLButtonElement;
+const audioElement = document.getElementById("audio-element") as HTMLAudioElement;
+const outputDeviceSelection = document.getElementById("output-device-selection") as HTMLSelectElement;
 
 interface GainControlledOsc {
     gainNode: GainNode;
@@ -13,18 +13,18 @@ interface GainControlledOsc {
 }
 
 // state
-var status = "uninitialized";
-var audioContext: AudioContext;
-var masterGain: GainNode;
-var attackTime = 0.001;
-var holdTime = 0.04;
-var releaseTime = 0.001;
-var gapTime = 0.04;
-var scheduledUntil: number;
-var rowFrequencies = [697, 770, 852, 941];
-var rowOscillators: GainControlledOsc[] = [];
-var columnFrequencies = [1209, 1336, 1477, 1633];
-var columnOscillators: GainControlledOsc[] = [];
+let status = "uninitialized";
+let audioContext: AudioContext;
+let masterGain: GainNode;
+let attackTime = 0.001;
+let holdTime = 0.065;
+let releaseTime = 0.001;
+let gapTime = 0.065;
+let scheduledUntil: number;
+let rowFrequencies = [697, 770, 852, 941];
+let rowOscillators: GainControlledOsc[] = [];
+let columnFrequencies = [1209, 1336, 1477, 1633];
+let columnOscillators: GainControlledOsc[] = [];
 
 // init
 initButton.addEventListener("click", initializeSimulator);
