@@ -22,5 +22,7 @@ jobs:
 
     - name: Build
       run: |
+        cd generator
+        pwd
         npm install
         npx webpack
