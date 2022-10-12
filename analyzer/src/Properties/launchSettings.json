@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SigQual.Analyzer": {
+      "commandName": "Project",
+      "commandLineArgs": "/Users/MBC/Music/doubletime.wav"
+    }
+  }
+}
